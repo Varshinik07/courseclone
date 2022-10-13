@@ -1,31 +1,32 @@
 <app-navbar></app-navbar>
 <div class="container">
     <div class="row">
-        <div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         </div>
         <div class="row">
-            <div class="col col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="col col-12 col-sm-6 col-md-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Course Title</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="courseTitle" [(ngModel)]="courseTitle">
+            </div>
+            <div class="col col-12 col-sm-6 col-md-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <label for="" class="form-label">course duration</label>
+           <input type="text" class="form-control" name="courseDuration" [(ngModel)]="courseDuration">
             </div>
             <div class="col col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                 <label for="" class="form-label">Course description</label>
-                <input type="text" class="form-control">
+               <textarea name="courseDescription" id="" class ="form-control" cols="30" rows="10" [(ngModel)]="courseDescription"></textarea>
             </div>
-            <div class="col col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                <label for="" class="form-label">course duration</label>
-           <input type="text" class="form-control">
-            </div>
-            <div class="col col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            
+            <div class="col col-12 col-sm-6 col-md-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Date</label>
-            <input type="date" class="form-control" name="" id="">
+            <input type="date" class="form-control" name="" id="" name="courseDate"[(ngModel)]="courseDate">
+            </div>
+            <div class="col col-12 col-sm-6 col-md-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <label for="" class="form-label">venue</label>
+                <input type="text" class="form-control" name="courseVenue"[(ngModel)]="courseVenue">
             </div>
             <div class="col col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                <label for="" class="form-label">Revenue</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="col col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                <button class="btn btn-success">Sumbit</button>
+                <button class="btn btn-success" (click)="readValues()">Sumbit</button>
             </div>
         </div>
     </div>
